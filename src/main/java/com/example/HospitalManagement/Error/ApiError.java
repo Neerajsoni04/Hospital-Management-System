@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.HospitalManagement.Error;
 
 
@@ -23,3 +24,30 @@ public class ApiError {
         this.statusCode = statusCode;
     }
 }
+=======
+package com.example.HospitalManagement.Error;
+
+
+import lombok.Data;
+import org.springframework.http.HttpStatus;
+
+import java.time.LocalDateTime;
+
+@Data
+public class ApiError {
+
+    private LocalDateTime timeStamp;
+    private String error;
+    private HttpStatus statusCode;
+
+    public ApiError() {
+        this.timeStamp = LocalDateTime.now();
+    }
+
+    public ApiError(String error, HttpStatus statusCode) {
+        this();
+        this.error = error;
+        this.statusCode = statusCode;
+    }
+}
+>>>>>>> 443bcd5283f8aa6175c42b5caefa7eb211e30d6d
